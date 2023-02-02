@@ -1,10 +1,18 @@
+---
+import Button from './button.astro';
+---
+
 <div class="hero">
   <div class="hero__container flex justify-between items-center">
     <div class="hero__info">
-      <div class="hero__info__title">
+      <div class="hero__info__title mb-12">
         <h1 class="text-slate-700 text-5xl font-bold mb-2">Hey, Soy <span class="text-purple-500">Andrés</span></h1>
         <h2 class="text-slate-700 text-3xl font-bold">Frontend Developer &</h2>
         <h2 class="text-slate-700 text-3xl font-bold">UI/UX Designer</h2>
+      </div>
+      <div class="hero__info__buttons flex">
+        <Button name="Descargar CV" icon="cloud-arrow-down"/>
+        <Button name="Github" icon="cloud-arrow-down"/>
       </div>
     </div>
     <div class="hero__illustration">
