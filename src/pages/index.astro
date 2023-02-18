@@ -1,13 +1,14 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Hero from '../components/hero.astro'
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/hero.astro";
+import AboutResume from "../components/about-resume.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main class="main flex justify-center">
-    <div class="main__container mx-4 md:mx-0 w-full md:w-4/5">
+  <main class="main">
+    <div class="main__container w-full flex flex-col items-center">
       <Hero />
+      <AboutResume />
     </div>
-	</main>
+  </main>
 </Layout>
-

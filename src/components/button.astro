@@ -2,7 +2,15 @@
 const { name, icon, type } = Astro.props;
 ---
 
-<button class="bg-rose-500 rounded-lg flex items-center py-2 px-3 h-11 text-white font-medium">
+<button
+  class:list={[
+    "rounded-lg flex items-center py-2 px-3 h-11 text-white font-medium",
+    {
+      "bg-rose-500": type === "primary",
+      "text-purple-500 border-purple-500 border": type === "secondary-outline",
+    },
+  ]}
+>
   {name}
-  <img class="ml-3" src={`/${icon}.svg`} alt={icon}>
+  <img class="ml-3" src={`/${icon}.svg`} alt={icon} />
 </button>
