@@ -1,0 +1,77 @@
+---
+import carrers from "../data/carrer.json";
+---
+
+<div class="carrer w-full flex justify-center mt-20">
+  <div class="carrer__container mx-4 md:mx-0 w-full md:w-4/5">
+    <div class="carrer__title">
+      <h2 class="text-5xl font-bold text-slate-800 mb-14">Trayectoria</h2>
+      {
+        carrers.map((carrer) => (
+          <div
+            class:list={[
+              "carrer__experience relative flex gap-10 mb-2",
+              { active: carrer.active },
+            ]}
+          >
+            <div class:list={["carrer__experience-pointer relative"]}>
+              <div
+                class:list={[
+                  "carrer__experience-pointe__content h-9 w-9 bg-slate-200 rounded-full",
+                  { "bg-green-400": carrer.active },
+                ]}
+              />
+              {carrer.active && (
+                <div
+                  class:list={[
+                    "carrer__experience-pointe__effect h-9 w-9 rounded-full top-0 absolute bg-green-400",
+                    { "animate-ping": carrer.active },
+                  ]}
+                />
+              )}
+            </div>
+            <div class="carrer__experience-content w-11/12 pb-12">
+              <span class="experience__year mb-2 bg-slate-200 text-slate-800 text-sm rounded py-1 px-2">
+                {carrer.year}
+              </span>
+              <div class="carrer__title mb-3">
+                <h5 class="text-2xl font-bold text-slate-800">{carrer.name}</h5>
+                {carrer.active && (
+                  <div class="text-white bg-purple-700 rounded inline py-1 px-2 text-xs">
+                    Activo
+                  </div>
+                )}
+              </div>
+
+              <p class="text-slate-800 font-normal">{carrer.description}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div>
+
+<style lang="scss" scoped>
+  .carrer__experience {
+    .carrer__experience-pointer {
+      &::before {
+        content: " ";
+        position: absolute;
+        height: calc(100% - 48px);
+        top: 46px;
+        left: 17px;
+        width: 2px;
+        border-left: 1px dashed #ccc;
+      }
+    }
+
+    &.active {
+      .carrer__experience-pointer {
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+</style>
