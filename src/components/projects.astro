@@ -7,10 +7,10 @@ import projects from "../data/projects.json";
     <div class="projects__title">
       <h2 class="text-5xl font-bold text-slate-800 mb-14">Proyectos</h2>
     </div>
-    <div class="projects__content flex gap-7">
+    <div class="projects__content flex flex-wrap lg:flex-nowrap gap-7">
       {
         projects.map((project) => (
-          <div class="project__card px-5 py-7 border rounded-md">
+          <div class="project__card px-5 py-7 w-full lg:w-auto border rounded-md">
             <h4 class="text-3xl text-slate-800 font-bold">{project.title}</h4>
             <p class="mb-7">{project.description}</p>
             <div class="project-options">
