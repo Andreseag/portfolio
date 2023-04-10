@@ -1,6 +1,61 @@
 ---
-import Button from "./button.astro";
 ---
+
+<script>
+  // // we add event listener for click on send button
+  // const sendMailButton: HTMLButtonElement | null = document.querySelector('#contactFormButton')
+
+  // sendMailButton?.addEventListener('click', (event) => {
+  //   // stop the page from the reloading
+  //   event.preventDefault()
+
+  //   // selecting the form
+  //   const contactForm: HTMLFormElement | null = document.querySelector('#contact-form')
+
+  //   // send 
+  //   if ( contactForm ) {
+  //     const data = new FormData(contactForm)
+  //     fetch(
+  //       "https://formbold.com/s/oejVK",
+  //       { 
+  //         method: "POST",
+  //         body: data
+  //       }
+  //       )
+  //     // inform the user that the form was submitted
+  //     alert('Thank you, your form was submitted.');
+  //     // clear the inputs
+  //     contactForm.reset()
+  //   }
+  // })
+
+  // ------------------------------
+  const btn: HTMLButtonElement | null = document.querySelector('#contactFormButton')
+  const contactForm = document.querySelector('#contact-form')
+  const emailjs = (window as any).emailjs
+  
+  contactForm?.addEventListener('submit', function(event) {
+    event.preventDefault();
+    if(btn) {
+      btn.value = 'Sending...';
+
+      const serviceID = 'default_service';
+      const templateID = 'template_ud3dvxa';
+      const self: any = this;
+
+      emailjs.sendForm(serviceID, templateID, self)
+        .then(() => {
+          btn.value = 'Send Email';
+          alert('Sent!');
+        }, (err: any) => {
+          btn.value = 'Send Email';
+          alert(JSON.stringify(err));
+        });
+    }
+    
+  });
+
+</script>
 
 <div id="contact" class="contact w-full flex justify-center mt-20">
   <div class="contact__container px-4 md:px-0 w-full md:w-4/5">
@@ -10,24 +65,40 @@ import Button from "./button.astro";
         Dime, ¿Cómo puedo ayudarte?
       </h5>
     </div>
-    <div class="contact__form mb-7">
+    <form
+      action="https://formbold.com/s/oejVK"
+      method="POST"
+      class="contact__form mb-7"
+      id="contact-form"
+    >
       <div class="flex flex-col md:flex-row justify-between gap-5 mb-7">
         <div class="input-group w-auto md:w-1/2 flex flex-col">
-          <label class="uppercase text-slate-800 mb-1" for="name">combre:</label
+          <label class="uppercase text-slate-800 mb-1" for="name">nombre:</label
           >
-          <input name="name" class="border rounded-md h-12" type="text" />
+          <input name="name" class="border rounded-md h-12 px-4" type="text" required />
         </div>
         <div class="input-group w-auto md:w-1/2 flex flex-col">
           <label class="uppercase text-slate-800 mb-1" for="name">correo:</label
           >
-          <input name="name" class="border rounded-md h-12" type="text" />
+          <input type="email" name="email" class="border rounded-md h-12 px-4" type="text" required/>
         </div>
       </div>
       <div class="input-group w-full flex flex-col">
-        <label class="uppercase text-slate-800 mb-1" for="name">correo:</label>
-        <textarea name="name" class="border rounded-md h-64"></textarea>
+        <label class="uppercase text-slate-800 mb-1" for="name">Mensaje:</label>
+        <textarea name="message" class="border rounded-md h-64 px-4" required></textarea>
       </div>
-    </div>
-    <Button width="w-60" name="Enviar" type="green" />
+      <input
+        class="w-60 bg-green-600 text-white rounded-md h-11 font-semibold mt-4"
+        type="submit"
+        id="contactFormButton"
+        value="Send Email"
+      >
+    </form>
   </div>
+  <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <script type="text/javascript">
+    emailjs.init('53GlDrZqaacrEQKll')
+  </script>
 </div>

@@ -2,6 +2,21 @@
 import Button from "./button.astro";
 ---
 
+<script>
+  const btnDownloadCV: HTMLButtonElement | any = document.getElementById('download-cv')
+  const btnGitHub: HTMLButtonElement | any = document.getElementById('github')
+  const githubURL: string = 'https://github.com/Andreseag'
+
+  btnDownloadCV.addEventListener('click', () => {
+
+  })
+
+  btnGitHub.addEventListener('click', () => {
+    window.open(githubURL, '_blank')
+  })
+</script>
+
+
 <div class="hero px-4 md:px-0 w-full my-16 lg:my-0 lg:mt-5 md:w-4/5">
   <div class="hero__container flex justify-between items-center">
     <div class="hero__info">
@@ -13,8 +28,8 @@ import Button from "./button.astro";
         <h2 class="text-slate-700 text-3xl font-bold">UI/UX Designer</h2>
       </div>
       <div class="hero__info__buttons flex gap-4">
-        <Button name="Descargar CV" icon="cloud-arrow-down" type="primary" />
-        <Button name="Github" icon="github-icon" type="secondary-outline" />
+        <Button id="download-cv" name="Descargar CV" icon="cloud-arrow-down" type="primary" />
+        <Button id="github" name="Github" icon="github-icon" type="secondary-outline" />
       </div>
     </div>
     <div class="hero__illustration">
