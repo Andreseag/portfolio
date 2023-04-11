@@ -1,43 +1,29 @@
 [
   {
-    "title": "Pokedex",
-    "description": "Una web que permite ver todos los pokemon de la primer generación.",
+    "title": "Platzi Exchange",
+    "description": "Es una app que te permite ver la información de diferentes criptomonedas cómo Bitcoin, Ethereum entre otras",
     "options": [
       {
         "name": "github",
-        "link": ""
+        "link": "https://github.com/Andreseag/platzi-exchange"
       },
       {
         "name": "demo",
-        "link": ""
+        "link": "https://stupefied-northcutt-4e7926.netlify.app/"
       }
     ]
   },
   {
-    "title": "Pokedex",
-    "description": "Una web que permite ver todos los pokemon de la primer generación.",
+    "title": "Phone Store",
+    "description": "Es un pequeño E-commerce en el cual simulas la compra de celulares usados",
     "options": [
       {
         "name": "github",
-        "link": ""
+        "link": "https://github.com/Andreseag/react-phone-shop"
       },
       {
         "name": "demo",
-        "link": ""
-      }
-    ]
-  },
-  {
-    "title": "Pokedex",
-    "description": "Una web que permite ver todos los pokemon de la primer generación.",
-    "options": [
-      {
-        "name": "github",
-        "link": ""
-      },
-      {
-        "name": "demo",
-        "link": ""
+        "link": "https://5c7eb917abc69c8cefcbd403--react-phone-store-andres.netlify.app/"
       }
     ]
   }
