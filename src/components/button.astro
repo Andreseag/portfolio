@@ -7,14 +7,14 @@ const { action, name, icon, type, width, id } = Astro.props;
   class:list={[
     "rounded-lg flex items-center justify-center py-2 px-3 h-11 text-white font-medium",
     {
-      "bg-rose-500": type === "primary",
-      "bg-green-500": type === "green",
-      "text-purple-500 border-purple-500 border": type === "secondary-outline",
+      "bg-rose-500 hover:bg-rose-700": type === "primary",
+      "bg-green-500 hover:bg-green-700": type === "green",
+      "text-purple-500 border-purple-500 hover:bg-purple-700 hover:text-white border": type === "secondary-outline",
     },
     width,
   ]}
   type={action}
 >
   {name}
-  {icon && <img class="ml-3" src={`/${icon}.svg`} alt={icon} />}
+  {icon && <img class="ml-3 text-white" src={`/${icon}.svg`} alt={icon} />}
 </button>
