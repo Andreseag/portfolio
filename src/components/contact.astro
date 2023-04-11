@@ -21,6 +21,9 @@
           btn.value = 'Send Email';
           alertElement?.classList.remove("hidden")
           contactForm?.reset()
+          setTimeout(() => {
+            alertElement?.classList.add("hidden")
+          }, 5000)
         }, (err: any) => {
           btn.value = 'Send Email';
           console.error(JSON.stringify(err));
