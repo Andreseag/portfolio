@@ -6,9 +6,10 @@ import Button from "./button.astro";
   const btnDownloadCV: HTMLButtonElement | any = document.getElementById('download-cv')
   const btnGitHub: HTMLButtonElement | any = document.getElementById('github')
   const githubURL: string = 'https://github.com/Andreseag'
+  const CurriculumURL: string = 'https://drive.google.com/file/d/1ZqsuM4bmuf5SP6uYzRP7HUaGX6Q5DVrd/view'
 
   btnDownloadCV.addEventListener('click', () => {
-
+    window.open(CurriculumURL, '_blank')
   })
 
   btnGitHub.addEventListener('click', () => {
