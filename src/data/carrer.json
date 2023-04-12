@@ -4,7 +4,7 @@
     "company": "Upwork",
     "url": "https://www.upwork.com/",
     "description": "Empecé en el mundo del desarrollo realizando diferentes proyectos cómo Landing Pages y proyectos Wordpress para pequeñas empresas.",
-    "year": 2018,
+    "year": "Oct 2018 - Oct 2019",
     "active": false
   },
   {
@@ -12,7 +12,7 @@
     "company": "Quick.com.co",
     "url": "https://quick.com.co/",
     "description": "Mi primer trabajo en un equipo de desarrollo fue en Quick empresa de logística donde me desempeñé cómo Frontend Developer usando tecnologías como Javascript, React, Redux, Redux Saga, SASS, Bootstrap & Tailwind.",
-    "year": 2019,
+    "year": "Oct 2019 - Dec 2021",
     "active": false
   },
   {
@@ -20,7 +20,7 @@
     "company": "Neivor",
     "url": "https://neivor.com/",
     "description": "Me desempeñé como Frontend Developer para Neivor, un aplicativo para el manejo administrativo y la convivencia de conjuntos recidenciales, trabajando con tecnologías cómo Javascript, Vue, Vuex, Dart & Flutter.",
-    "year": 2022,
+    "year": "Ene 2022 - Sep 2022",
     "active": false
   },
   {
@@ -28,7 +28,7 @@
     "company": "Katapult Commerce",
     "url": "https://www.katapultcommerce.com/",
     "description": "Actualmente trabajo para Katapult Commerce una Startup que simplifica la forma de vender a traves de su plataforma E-Commerce, desempeñandome cómo Ssr Frontend Developer usando diferentes tecnologías cómo Vue, Vuex, Typescript, Tailwind & SASS.",
-    "year": 2022,
+    "year": "Sep 2022 - Actual",
     "active": true
   }
 ]
