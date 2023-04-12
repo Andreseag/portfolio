@@ -10,19 +10,13 @@ import projects from "../../data/projects.json";
     <div class="projects__content flex flex-wrap lg:flex-nowrap gap-7">
       {
         projects.map((project) => (
-          <div class="project__card px-5 py-7 w-full lg:w-auto border rounded-md">
-            <h4 class="text-2xl md:text-3xl text-slate-800 font-bold">{project.title}</h4>
+          <div class="project__card bg-white px-5 py-7 w-full lg:w-auto border rounded-md">
+            <h4 class="text-xl md:text-2xl text-slate-800 font-bold">{project.title}</h4>
             <p class="mb-7">{project.description}</p>
             <div class="project-options">
               {project.options.map((option) => (
                 <a
-                  class:list={[
-                    "px-5 py-2 mr-2 rounded-xl text-white font-semibold",
-                    {
-                      "bg-purple-600 hover:bg-purple-800": option.name === "github",
-                      "bg-green-600 hover:bg-green-800": option.name === "demo",
-                    },
-                  ]}
+                  class="px-5 py-2 mr-2 rounded-xl font-medium border hover:bg-slate-200" 
                   href={option.link}
                   target="_blank"
                 >
