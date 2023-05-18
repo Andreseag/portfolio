@@ -2,43 +2,47 @@
 ---
 
 <script>
-  const btn: HTMLButtonElement | null = document.querySelector('#contactFormButton')
-  const contactForm: HTMLFormElement | null = document.querySelector('#contact-form')
-  const emailjs = (window as any).emailjs
-  const alertElement: HTMLDivElement | null = document.querySelector('#alert')
-  
-  contactForm?.addEventListener('submit', function(event) {
-    event.preventDefault();
-    if(btn) {
-      btn.value = 'Sending...';
+  const btn: HTMLButtonElement | null =
+    document.querySelector("#contactFormButton");
+  const contactForm: HTMLFormElement | null =
+    document.querySelector("#contact-form");
+  const emailjs = (window as any).emailjs;
+  const alertElement: HTMLDivElement | null = document.querySelector("#alert");
 
-      const serviceID: string = 'default_service';
-      const templateID: string = 'template_ud3dvxa';
+  contactForm?.addEventListener("submit", function (event) {
+    event.preventDefault();
+    if (btn) {
+      btn.value = "Sending...";
+
+      const serviceID: string = "default_service";
+      const templateID: string = "template_ud3dvxa";
       const self: any = this;
 
-      emailjs.sendForm(serviceID, templateID, self)
-        .then(() => {
-          btn.value = 'Send Email';
-          alertElement?.classList.remove("hidden")
-          contactForm?.reset()
+      emailjs.sendForm(serviceID, templateID, self).then(
+        () => {
+          btn.value = "Send Email";
+          alertElement?.classList.remove("hidden");
+          contactForm?.reset();
           setTimeout(() => {
-            alertElement?.classList.add("hidden")
-          }, 5000)
-        }, (err: any) => {
-          btn.value = 'Send Email';
+            alertElement?.classList.add("hidden");
+          }, 5000);
+        },
+        (err: any) => {
+          btn.value = "Send Email";
           console.error(JSON.stringify(err));
-          contactForm?.reset()
-        });
+          contactForm?.reset();
+        }
+      );
     }
-    
   });
-
 </script>
 
-<div id="contact" class="contact w-full flex justify-center mt-20">
+<section id="contact" class="contact w-full flex justify-center mt-20">
   <div class="contact__container px-4 md:px-0 w-full md:w-4/5 lg:max-w-6xl">
     <div class="contact__title mb-14">
-      <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-3">Charlemos</h2>
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-3">
+        Charlemos
+      </h2>
       <h5 class="text-lg md:text-xl font-bold text-slate-600">
         Dime, ¿Cómo puedo ayudarte?
       </h5>
@@ -51,41 +55,75 @@
     >
       <div class="flex flex-col md:flex-row justify-between gap-5 mb-7">
         <div class="input-group w-auto md:w-1/2 flex flex-col">
-          <label class="capitalize font-semibold text-slate-800 mb-1" for="name">nombre:</label
+          <label class="capitalize font-semibold text-slate-800 mb-1" for="name"
+            >nombre:</label
           >
-          <input name="name" class="bg-white border rounded-md h-12 px-4" type="text" required />
+          <input
+            name="name"
+            class="bg-white border rounded-md h-12 px-4"
+            type="text"
+            required
+          />
         </div>
         <div class="input-group w-auto md:w-1/2 flex flex-col">
-          <label class="capitalize font-semibold text-slate-800 mb-1" for="name">correo:</label
+          <label class="capitalize font-semibold text-slate-800 mb-1" for="name"
+            >correo:</label
           >
-          <input type="email" name="email" class="bg-white border rounded-md h-12 px-4" type="text" required/>
+          <input
+            type="email"
+            name="email"
+            class="bg-white border rounded-md h-12 px-4"
+            type="text"
+            required
+          />
         </div>
       </div>
       <div class="input-group w-full flex flex-col">
-        <label class="capitalize font-semibold text-slate-800 mb-1" for="name">mensaje:</label>
-        <textarea name="message" class="bg-white border rounded-md h-64 p-4" required></textarea>
+        <label class="capitalize font-semibold text-slate-800 mb-1" for="name"
+          >mensaje:</label
+        >
+        <textarea
+          name="message"
+          class="bg-white border rounded-md h-64 p-4"
+          required></textarea>
       </div>
       <input
         class="w-full md:w-60 bg-green-400 hover:bg-green-600 cursor-pointer text-slate-800 rounded-md h-11 font-semibold mt-4"
         type="submit"
         id="contactFormButton"
         value="Enviar email"
-      >
+      />
     </form>
-    <div id="alert" class="hidden bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md" role="alert">
+    <div
+      id="alert"
+      class="hidden bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md"
+      role="alert"
+    >
       <div class="flex">
-        <div class="py-1"><svg class="fill-current h-6 w-6 text-teal-500 mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"/></svg></div>
+        <div class="py-1">
+          <svg
+            class="fill-current h-6 w-6 text-teal-500 mr-4"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            ><path
+              d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"
+            ></path></svg>
+        </div>
         <div>
           <p class="font-bold">Gracias por contactarme</p>
-          <p class="text-sm">Tu mensaje fue recibido y pronto tendras respuesta</p>
+          <p class="text-sm">
+            Tu mensaje fue recibido y pronto tendras respuesta
+          </p>
         </div>
       </div>
     </div>
   </div>
-  <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+  ></script>
 
   <script type="text/javascript">
-    emailjs.init('53GlDrZqaacrEQKll')
+    emailjs.init("53GlDrZqaacrEQKll");
   </script>
-</div>
+</section>

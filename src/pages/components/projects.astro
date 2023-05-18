@@ -2,21 +2,25 @@
 import projects from "../../data/projects.json";
 ---
 
-<div class="projects w-full flex justify-center mt-20">
+<section class="projects w-full flex justify-center mt-20">
   <div class="projects__container mx-4 md:mx-0 w-full md:w-4/5 lg:max-w-6xl">
     <div class="projects__title">
-      <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-12">Proyectos</h2>
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-12">
+        Proyectos
+      </h2>
     </div>
     <div class="projects__content flex flex-wrap lg:flex-nowrap gap-7">
       {
         projects.map((project) => (
-          <div class="project__card bg-white px-5 py-7 w-full lg:w-auto border rounded-md">
-            <h4 class="text-xl md:text-2xl text-slate-800 font-bold">{project.title}</h4>
+          <article class="project__card bg-white px-5 py-7 w-full lg:w-auto border rounded-md">
+            <h4 class="text-xl md:text-2xl text-slate-800 font-bold">
+              {project.title}
+            </h4>
             <p class="mb-7 text-slate-600">{project.description}</p>
             <div class="project-options">
               {project.options.map((option) => (
                 <a
-                  class="px-5 py-2 mr-2 text-slate-600 rounded-md font-medium border hover:bg-slate-200" 
+                  class="px-5 py-2 mr-2 text-slate-600 rounded-md font-medium border hover:bg-slate-200"
                   href={option.link}
                   target="_blank"
                 >
@@ -24,9 +28,9 @@ import projects from "../../data/projects.json";
                 </a>
               ))}
             </div>
-          </div>
+          </article>
         ))
       }
     </div>
   </div>
-</div>
+</section>
