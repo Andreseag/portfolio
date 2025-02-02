@@ -24,6 +24,7 @@ export default {
         "gray-10": "var(--gray-10)",
         "gray-11": "var(--gray-11)",
         "gray-12": "var(--gray-12)",
+        "color-border": "var(--color-border)",
       },
     },
   },
