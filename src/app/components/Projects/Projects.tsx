@@ -65,17 +65,17 @@ const Projects = () => {
             <a
               href={project.url}
               key={project.name}
-              className="projects__item relative block cursor-pointer group mb-3 duration-200 bg-gray-1 px-4 py-8 rounded-lg"
+              className="projects__item relative block cursor-pointer group mb-3 duration-200 bg-color-background-sidebar px-4 py-8 rounded-lg"
               target="_blank"
             >
               <p className="text-sm mb-2">{project.year}</p>
               <img
-                className="absolute top-5 right-3"
+                className="absolute top-5 right-4"
                 src={project.image}
                 alt={project.name}
                 width={project.name === "Tiendas 3B" ? 50 : 80}
               />
-              <h3 className="projects__item-title group-hover:underline mb-1 text-xl text-gray-8">
+              <h3 className="projects__item-title group-hover:underline mb-1 text-xl text-color-text-link">
                 {project.name}
               </h3>
               <p className="projects__item-description text-sm italic text-gray-7">

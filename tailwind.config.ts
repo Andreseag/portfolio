@@ -28,6 +28,8 @@ export default {
         primary: "var(--primary)",
         purple: "var(--purple)",
         "color-text-muted": "var(--color-text-muted)",
+        "color-background-sidebar": "var(--color-background-sidebar)",
+        "color-text-link": "var(--color-text-link)",
       },
     },
   },

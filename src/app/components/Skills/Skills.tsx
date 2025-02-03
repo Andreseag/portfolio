@@ -86,7 +86,7 @@ const Skills = () => {
           {developerSkills.map((skill) => (
             <div
               key={skill.name}
-              className="skills__item bg-gray-1 p-3 h-28 rounded-lg mb-3 flex items-center justify-center"
+              className="skills__item bg-color-background-sidebar p-3 h-28 rounded-lg mb-3 flex items-center justify-center"
             >
               <img src={skill.image} alt={skill.name} width={60} height={60} />
             </div>

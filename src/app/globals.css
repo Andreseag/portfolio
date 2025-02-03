@@ -24,6 +24,8 @@
   --purple: #959af8;
   --color-text-muted: light-dark(var(--gray-6), var(--gray-5));
   --color-text-emphasized: light-dark(var(--gray-10), var(--gray-0));
+  --color-background-sidebar: light-dark(var(--gray-05), var(--gray-10));
+  --color-text-link: light-dark(#4850e5, var(--purple));
 }
 
 @media (prefers-color-scheme: dark) {

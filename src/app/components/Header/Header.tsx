@@ -24,8 +24,11 @@ const Header = () => {
   return (
     <header className="header absolute bg-white/30 backdrop-blur-md h-[60px]  top-0 left-0 w-full">
       <div className="header__container border-b border-color-border h-full flex items-center justify-between px-4">
-        <div className="header__logo">
-          <span className="font-bold">Andres Castro</span>
+        <div className="header__logo ">
+          <a className="flex gap-2 items-center" href="/">
+            <p className="text-2xl">⚛️</p>
+            <span className="font-semibold text-gray-7">Andres Castro</span>
+          </a>
         </div>
         <div className="header__options flex items-center gap-6">
           <nav className="header__nav">
