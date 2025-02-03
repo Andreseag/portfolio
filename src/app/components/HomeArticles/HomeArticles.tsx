@@ -1,4 +1,4 @@
-import { format, parse } from "@formkit/tempo";
+import { format } from "@formkit/tempo";
 
 // create article to software development
 const articleData = [
