@@ -9,7 +9,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        "gray-0": "var(--gray-0)",
+        "gray-0": "#f9f9f9",
         "gray-05": "var(--gray-05)",
         "gray-1": "var(--gray-1)",
         "gray-2": "var(--gray-2)",

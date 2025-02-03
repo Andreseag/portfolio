@@ -11,7 +11,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <body className={`${inter.className} antialiased`}>
+        <div className="container max-w-5xl mt-28 mx-auto">{children}</div>
+      </body>
     </html>
   );
 }
