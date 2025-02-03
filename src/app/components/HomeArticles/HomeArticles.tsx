@@ -26,7 +26,7 @@ const articleData = [
 
 const HomeArticles = () => {
   return (
-    <div className="articles">
+    <div className="articles pb-9 mb-9">
       <div className="articles__container">
         <div className="articles__title mb-6">
           <h2>Artículos</h2>
