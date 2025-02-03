@@ -1,5 +1,5 @@
 import React from "react";
-import { AiOutlineGithub } from "react-icons/ai";
+import { AiOutlineGithub, AiOutlineMoon, AiOutlineSun } from "react-icons/ai";
 
 const links = [
   {
@@ -34,7 +34,7 @@ const Header = () => {
                 <li key={link.name}>
                   <a
                     href="#"
-                    className="text-gray-10 px-3 py-2 rounded-lg hover:bg-gray-1 transition-all duration-200"
+                    className="text-gray-7 px-3 py-2 rounded-lg hover:bg-gray-1 transition-all duration-200"
                   >
                     {link.name}
                   </a>
@@ -43,10 +43,19 @@ const Header = () => {
             </ul>
           </nav>
           <div className="header__extra-options">
-            <ul>
+            <ul className="flex gap-2">
               <li className="hover:bg-gray-1 transition-all duration-200 flex items-center justify-center w-9 h-9 rounded-md">
-                <a href="">
-                  <AiOutlineGithub size={24} />
+                <button>
+                  {/* <AiOutlineSun className="text-primary" size={24} /> */}
+                  <AiOutlineMoon className="text-purple" size={24} />
+                </button>
+              </li>
+              <li className="hover:bg-gray-1 transition-all duration-200 flex items-center justify-center w-9 h-9 rounded-md">
+                <a href="https://github.com/Andreseag" target="_blank">
+                  <AiOutlineGithub
+                    className="text-color-text-muted"
+                    size={24}
+                  />
                 </a>
               </li>
             </ul>

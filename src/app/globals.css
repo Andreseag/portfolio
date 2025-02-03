@@ -20,6 +20,9 @@
   --gray-11: #111;
   --gray-12: #0f0f0f;
   --color-border: light-dark(var(--gray-3), var(--gray-65));
+  --primary: #ffcc00;
+  --purple: #959af8;
+  --color-text-muted: light-dark(var(--gray-6), var(--gray-5));
 }
 
 @media (prefers-color-scheme: dark) {
