@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className="hero h-screen">
+    <section className="hero mb-12">
       <div className="hero__container flex items-center gap-20">
         <div className="hero__info flex flex-col items-start justify-center h-full w-full">
           <h1 className="flex items-end font-bold">
