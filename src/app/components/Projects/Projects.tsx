@@ -54,7 +54,7 @@ const projectsData = [
 
 const Projects = () => {
   return (
-    <div className="projects">
+    <div className="projects pb-9 mb-9">
       <div className="projects__container">
         <div className="projects__title mb-6">
           <h2>Proyectos</h2>
@@ -78,7 +78,7 @@ const Projects = () => {
               <h3 className="projects__item-title group-hover:underline mb-1 text-xl text-color-text-link">
                 {project.name}
               </h3>
-              <p className="projects__item-description text-sm italic text-gray-7">
+              <p className="projects__item-description text-gray-7">
                 {project.description}
               </p>
             </a>
