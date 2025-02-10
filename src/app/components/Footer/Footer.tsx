@@ -1,5 +1,9 @@
 import React from "react";
-import { AiOutlineGithub, AiOutlineLinkedin } from "react-icons/ai";
+import {
+  AiOutlineGithub,
+  AiOutlineLinkedin,
+  AiOutlineWhatsApp,
+} from "react-icons/ai";
 
 // create array with social media links and icons to render in the footer
 const socialMediaLinks = [
@@ -13,6 +17,11 @@ const socialMediaLinks = [
     link: "https://github.com/Andreseag",
     icon: <AiOutlineGithub size={24} color="#181717" />,
   },
+  {
+    name: "Whatsapp",
+    link: "https://wa.link/a6li82",
+    icon: <AiOutlineWhatsApp size={24} color="#25D366" />,
+  },
 ];
 
 const Footer = () => {
@@ -25,7 +34,7 @@ const Footer = () => {
               href={socialMedia.link}
               target="_blank"
               rel="noreferrer"
-              className="footer__social-media-link flex items-center gap-2 bg-gray-1 py-1 px-2 rounded-md border border-gray-3"
+              className="footer__social-media-link flex items-center text-sm gap-2 bg-gray-1 py-1 px-2 rounded-md border border-gray-3"
             >
               {socialMedia.icon}
               {socialMedia.name}
