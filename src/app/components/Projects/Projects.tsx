@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const projectsData = [
   {
@@ -79,11 +80,12 @@ const Projects = () => {
               target="_blank"
             >
               <p className="text-sm mb-2">{project.year}</p>
-              <img
+              <Image
                 className="absolute top-5 right-4"
                 src={project.image}
                 alt={project.name}
                 width={project.name === "Tiendas 3B" ? 50 : 80}
+                height={project.name === "Tiendas 3B" ? 50 : 80}
               />
               <h3 className="projects__item-title group-hover:underline mb-1 text-xl text-color-text-link">
                 {project.name}

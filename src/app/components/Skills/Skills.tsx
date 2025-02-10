@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const developerSkills = [
   {
     name: "JavaScript",
@@ -88,7 +90,12 @@ const Skills = () => {
               key={skill.name}
               className="skills__item bg-color-background-sidebar p-3 h-28 rounded-lg mb-3 flex items-center justify-center"
             >
-              <img src={skill.image} alt={skill.name} width={60} height={60} />
+              <Image
+                src={skill.image}
+                alt={skill.name}
+                width={60}
+                height={60}
+              />
             </div>
           ))}
         </div>
