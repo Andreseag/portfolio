@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const projectsData = [
   {
     name: "Quick",
@@ -50,6 +52,14 @@ const projectsData = [
       "https://www.appcopec.cl/wp-content/themes/chris/img/menu/logo_copecpay.svg",
     year: "2023",
   },
+  {
+    name: "Cocacola Andina",
+    description: "Sitio web de la empresa de bebidas Coca Cola Andina",
+    url: "https://www.koandina.com/ ",
+    image:
+      "https://static.vecteezy.com/system/resources/previews/020/190/670/non_2x/cocacola-logo-cocacola-icon-free-free-vector.jpg",
+    year: "2023",
+  },
 ];
 
 const Projects = () => {
@@ -62,7 +72,7 @@ const Projects = () => {
         </div>
         <div className="projects__content grid gap-4 grid-cols-1 md:grid-cols-2">
           {projectsData.map((project) => (
-            <a
+            <Link
               href={project.url}
               key={project.name}
               className="projects__item relative block cursor-pointer group mb-3 duration-200 bg-color-background-sidebar px-4 py-8 rounded-lg"
@@ -81,7 +91,7 @@ const Projects = () => {
               <p className="projects__item-description text-gray-7">
                 {project.description}
               </p>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

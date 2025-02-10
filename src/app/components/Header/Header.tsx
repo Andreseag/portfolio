@@ -1,5 +1,6 @@
 import React from "react";
-import { AiOutlineGithub, AiOutlineMoon, AiOutlineSun } from "react-icons/ai";
+import { AiOutlineGithub, AiOutlineMoon } from "react-icons/ai";
+import Link from "next/link";
 
 const links = [
   {
@@ -25,23 +26,20 @@ const Header = () => {
     <header className="header absolute bg-white/30 backdrop-blur-md h-[60px]  top-0 left-0 w-full">
       <div className="header__container border-b border-color-border h-full flex items-center justify-between px-4">
         <div className="header__logo ">
-          <a className="flex gap-2 items-center" href="/">
+          <Link className="flex gap-2 items-center" href="/">
             <p className="text-2xl">⚛️</p>
             <span className="font-semibold text-gray-7">Andres Castro</span>
-          </a>
+          </Link>
         </div>
         <div className="header__options flex items-center gap-6">
           <nav className="header__nav">
             <ul className="flex gap-1">
               {links.map((link) => (
-                <li key={link.name}>
-                  <a
-                    href="#"
-                    className="text-gray-7 px-3 py-2 rounded-lg hover:bg-gray-1 transition-all duration-200"
-                  >
+                <Link href={link.url} key={link.name}>
+                  <p className="text-gray-7 px-3 py-2 rounded-lg hover:bg-gray-1 transition-all duration-200">
                     {link.name}
-                  </a>
-                </li>
+                  </p>
+                </Link>
               ))}
             </ul>
           </nav>
@@ -54,12 +52,12 @@ const Header = () => {
                 </button>
               </li>
               <li className="hover:bg-gray-1 transition-all duration-200 flex items-center justify-center w-9 h-9 rounded-md">
-                <a href="https://github.com/Andreseag" target="_blank">
+                <Link href="https://github.com/Andreseag" target="_blank">
                   <AiOutlineGithub
                     className="text-color-text-muted"
                     size={24}
                   />
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

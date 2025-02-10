@@ -1,4 +1,5 @@
 import { format } from "@formkit/tempo";
+import Link from "next/link";
 
 // create article to software development
 const articleData = [
@@ -38,7 +39,7 @@ const HomeArticles = () => {
 
         <div className="articles__list">
           {articleData.map((article) => (
-            <a
+            <Link
               href="#"
               key={article.title}
               className="articles__item block cursor-pointer group mb-3 py-1 duration-200"
@@ -49,7 +50,7 @@ const HomeArticles = () => {
               <p className="articles__item-date text-sm italic text-gray-7">
                 {format(article.date, "medium")}
               </p>
-            </a>
+            </Link>
           ))}
         </div>
       </div>
